@@ -1,0 +1,50 @@
+* {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(190, 75%, 47%);
+}
+
+#swipey-continer {
+  font-size: 2em;
+  text-align: center;
+}
+
+.swipey {
+  background-color: #d2691e;
+  font-size: 2em;
+  border-radius: 25px 25px 25px 25px;
+  height: 2em;
+
+}
+.swipey:active {
+  border-top: solid;
+  border-right: groove;
+  border-bottom: double;
+  background-color: hsl(50, 75%, 47%);
+}
+
+.swipey-right {
+  background-color: red;
+}
+
+.swipey-left {
+  background-color: blue;
+}
+
+#answer {
+  display: grid;
+  border-radius: 25px 25px 25px 25px;
+  background-color: hsl(205, 75%, 47%);
+}
+#whaaa {
+  background-color: red;
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    background-color: green;
+  }
+}
