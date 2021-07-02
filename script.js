@@ -12,13 +12,14 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchcancel', swipecancel);
   swipey[i].addEventListener('touchend', swipeend);
 } //add touch event listeners`
-function swipestart(event) {
-  swiperight = event.touches[0].clientX < swipey[0].clientWidth / 4;
-  swipeleft = event.touches[0].clientX > (swipey[0].clientWidth / 4) * 3;
-/*  if (swiperight) swipemove(event, this, 'to right');
-  if (swipeleft) swipemove(event, this, 'to left');*/
-} //swipestart()
-function swipemove(e, t) {
+
+
+async function swipestart(event) {
+  isRightSwipe = event.touches[0].clientX < swipey[0].clientWidth / 4;
+  return isRightSwipe;
+}.then(
+
+  function swipemove(e, t) {
   let swipeyX = e.touches[0].clientX;
   let swipeywidth = swipey[0].clientWidth;
   slider = parseInt((swipeyX / swipeywidth) * 100);
@@ -47,6 +48,14 @@ function swipemove(e, t) {
     ', ' +
     color4 +
     ')';
+)//.then
+
+
+
+
+
+
+
 } //swipemove()
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';

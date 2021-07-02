@@ -11,13 +11,11 @@ body {
   font-size: 2em;
   text-align: center;
 }
-
 .swipey {
   background-color: #d2691e;
   font-size: 2em;
   border-radius: 25px 25px 25px 25px;
   height: 2em;
-
 }
 .swipey:active {
   border-top: solid;
@@ -25,7 +23,6 @@ body {
   border-bottom: double;
   background-color: hsl(50, 75%, 47%);
 }
-
 .swipey-right {
   background-color: red;
 }
